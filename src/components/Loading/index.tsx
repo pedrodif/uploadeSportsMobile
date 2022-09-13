@@ -1,6 +1,3 @@
-// Packages
-import React from 'react';
-
 // Components
 import { View, ActivityIndicator } from 'react-native';
 
