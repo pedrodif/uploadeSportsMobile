@@ -1,8 +1,13 @@
+// Packages
 import { View, Image, FlatList } from 'react-native';
 
+// Styles
 import { styles } from './styles';
 
+// Assets
 import logoImg from '../../assets/logo-nlw-esports.png';
+
+// Components
 import { Heading } from '../../components/Heading';
 import { GameCard } from '../../components/GameCard';
 

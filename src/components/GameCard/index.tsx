@@ -1,5 +1,8 @@
+// Packages
 import { TouchableOpacity, TouchableOpacityProps, ImageBackground, ImageSourcePropType, Text } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+
+// Styles
 import { styles } from './styles';
 import { THEME } from '../../theme';
 

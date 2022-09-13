@@ -1,4 +1,4 @@
-// Components
+// Packages
 import { View, ActivityIndicator } from 'react-native';
 
 // Styles

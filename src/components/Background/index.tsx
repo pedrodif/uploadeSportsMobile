@@ -1,7 +1,10 @@
+// Packages
 import { ImageBackground } from 'react-native';
 
+// Styles
 import { styles } from './styles';
 
+// Assets
 import backgroundImg from '../../assets/background-galaxy.png';
 
 interface Props {
