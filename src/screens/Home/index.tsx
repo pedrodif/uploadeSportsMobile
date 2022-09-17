@@ -1,4 +1,5 @@
 // Packages
+import { useEffect } from 'react';
 import { View, Image, FlatList } from 'react-native';
 
 // Styles
@@ -15,6 +16,13 @@ import { GameCard } from '../../components/GameCard';
 import { GAMES } from '../../utils/games'
 
 export function Home() {
+  useEffect(() => {
+    fetch('http://192.168.90.2:3333/games')
+    .then(response => response.json())
+    .then(data => console.log(data))
+  }, [])
+
+
   return (
     <View style={styles.container}>
       <Image
