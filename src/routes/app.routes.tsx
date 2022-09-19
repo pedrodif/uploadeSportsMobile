@@ -1,11 +1,13 @@
+// Packages
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+// Components
 import { Home } from '../screens/Home';
 import { Game } from '../screens/Game';
 
 const { Navigator, Screen } = createNativeStackNavigator();
 
-function AppRoutes() {
+export function AppRoutes() {
   return (
     <Navigator>
       <Screen
