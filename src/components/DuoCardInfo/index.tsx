@@ -1,13 +1,29 @@
 // Packages
-import { View } from 'react-native';
+import { View, Text, ColorValue } from 'react-native';
 
 // Styles
 import { styles } from './styles';
+import { THEME } from '../../theme';
 
-export function DuoCardInfo() {
+interface DuoInfoProps {
+  label: string;
+  value: string;
+  colorValue?: ColorValue;
+}
+
+export function DuoCardInfo({ label, value, colorValue = THEME.COLORS.TEXT }: DuoInfoProps) {
   return (
     <View style={styles.container}>
+      <Text style={styles.label}>
+        {label}
+      </Text>
 
+      <Text
+        style={[styles.value, { color: colorValue }]}
+        numberOfLines={1}
+      >
+        {value}
+      </Text>
     </View>
   );
 }
