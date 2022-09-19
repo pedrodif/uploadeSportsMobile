@@ -7,6 +7,7 @@ import { Entypo } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Background } from '../../components/Background';
 import { Heading } from '../../components/Heading';
+import { Duocard } from '../../components/Duocard';
 
 // Assets
 import logoImg from '../../assets/logo-nlw-esports.png'
@@ -57,6 +58,8 @@ export function Game() {
           title={game.title}
           subtitle="Conecte-se e comece a jogar!"
         />
+
+        <Duocard />
       </SafeAreaView>
     </Background>
   );
