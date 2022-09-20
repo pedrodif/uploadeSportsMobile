@@ -18,12 +18,29 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  closeIcon:{
+    alignSelf: 'flex-end'
+  },
+  label: {
+    color: THEME.COLORS.TEXT,
+    fontSize: THEME.FONT_SIZE.MD,
+    fontFamily: THEME.FONT_FAMILY.SEMI_BOLD,
+    marginTop: 24,
+    marginBottom: 8,
+  },
+  discordButton: {
+    width: 231,
+    height: 48,
+    backgroundColor: THEME.COLORS.BACKGROUND_900,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 4,
+    marginBottom: 32,
+  },
   discord:{
     color: THEME.COLORS.TEXT,
     fontSize: THEME.FONT_SIZE.MD,
     fontFamily: THEME.FONT_FAMILY.REGULAR
   },
-  closeIcon:{
-    alignSelf: 'flex-end'
-  },
+
 });

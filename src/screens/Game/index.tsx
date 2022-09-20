@@ -22,6 +22,7 @@ import { THEME } from '../../theme';
 
 export function Game() {
   const [duos, setDuos] = useState<DuoCardProps[]>([])
+  const [discordDuoSelected, setDiscordDuoSelected] = useState('')
 
   const route = useRoute();
   const game = route.params as GameParams;
@@ -90,8 +91,9 @@ export function Game() {
         />
 
         <DuoMatch
-          visible={true}
+          visible={discordDuoSelected.length > 0}
           discord="pedrodif"
+          onClose={() => setDiscordDuoSelected('')}
         />
 
       </SafeAreaView>
