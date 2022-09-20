@@ -12,7 +12,6 @@ import { Duocard, DuoCardProps } from '../../components/Duocard';
 import { GameParams } from '../../@types/navigation';
 import { DuoMatch } from '../../components/DuoMatch';
 
-
 // Assets
 import logoImg from '../../assets/logo-nlw-esports.png'
 
@@ -98,7 +97,7 @@ export function Game() {
 
         <DuoMatch
           visible={discordDuoSelected.length > 0}
-          discord="pedrodif"
+          discord={discordDuoSelected}
           onClose={() => setDiscordDuoSelected('')}
         />
 
