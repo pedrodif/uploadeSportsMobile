@@ -10,6 +10,8 @@ import { Background } from '../../components/Background';
 import { Heading } from '../../components/Heading';
 import { Duocard, DuoCardProps } from '../../components/Duocard';
 import { GameParams } from '../../@types/navigation';
+import { DuoMatch } from '../../components/DuoMatch';
+
 
 // Assets
 import logoImg from '../../assets/logo-nlw-esports.png'
@@ -86,6 +88,12 @@ export function Game() {
             </Text>
           )}
         />
+
+        <DuoMatch
+          visible={true}
+          discord="pedrodif"
+        />
+
       </SafeAreaView>
     </Background>
   );
