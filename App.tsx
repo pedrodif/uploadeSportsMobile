@@ -22,13 +22,6 @@ import { Routes } from './src/routes';
 import './src/services/notificationConfigs';
 import { getPushNotificationToken } from './src/services/getPushNotificationToken';
 
-const getNotificationListener = useRef<Subscription>()
-const responseNotificationListener = useRef<Subscription>()
-
-useEffect(() => {
-  getPushNotificationToken();
-}, [])
-
 export default function App() {
   const [fontsLoaded] = useFonts({
     Inter_400Regular,
@@ -36,6 +29,14 @@ export default function App() {
     Inter_700Bold,
     Inter_900Black
   })
+
+  const getNotificationListener = useRef<Subscription>()
+  const responseNotificationListener = useRef<Subscription>()
+
+  useEffect(() => {
+    getPushNotificationToken();
+  }, [])
+
 
   // render
   return (
