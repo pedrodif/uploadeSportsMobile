@@ -20,6 +20,7 @@ import { Routes } from './src/routes';
 
 // Notifications
 import './src/services/notificationConfigs';
+import * as Notifications from 'expo-notifications';
 import { getPushNotificationToken } from './src/services/getPushNotificationToken';
 
 export default function App() {
@@ -35,6 +36,25 @@ export default function App() {
 
   useEffect(() => {
     getPushNotificationToken();
+  }, [])
+
+
+  useEffect(() => {
+    getNotificationListener.current = Notifications.addNotificationReceivedListener(notification => {
+      console.log(notification);
+    })
+
+    responseNotificationListener.current = Notifications.addNotificationResponseReceivedListener(response => {
+      console.log(response);
+    })
+
+    return () => {
+      if (getNotificationListener.current && responseNotificationListener.current) {
+        Notifications.removeNotificationSubscription(getNotificationListener.current);
+        Notifications.removeNotificationSubscription(responseNotificationListener.current);
+      }
+    }
+
   }, [])
 
 
